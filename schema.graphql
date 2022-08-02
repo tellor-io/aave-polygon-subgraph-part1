@@ -1,64 +1,10 @@
 type TokenRecipients @entity {
   id: ID! # token address string
-  recipients: Bytes[] # address token recipients
+  recipients: [Snapshot!] # address token recipients
 }
 
-type CErc20DelegatorTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-type CErc20Delegator_hDAITransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-
-type CErc20Delegator_hUSDCTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-
-type CErc20Delegator_hUSDTTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-
-type CErc20Delegator_hFRAXTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-type CErc20Delegator_hWBTCTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-
-type CEther_hMATICTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
-}
-
-type CErc20Delegator_hLINKTransfer @entity {
-  id: ID!
-  from: Bytes! # address
-  to: Bytes! # address
-  amount: BigInt! # uint256
+type Snapshot @entity {
+  id: ID! # tokenholder address string
+  balance: BigInt # balance of the tokenholder
+  debt: BigInt # debt of the tokenholder
 }
