@@ -4,3 +4,823 @@ type ExampleEntity @entity {
   cashPrior: BigInt! # uint256
   interestAccumulated: BigInt! # uint256
 }
+type CErc20Delegator_hDAIAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAILiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAINewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hDAINewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CErc20Delegator_hDAINewImplementation @entity {
+  id: ID!
+  oldImplementation: Bytes! # address
+  newImplementation: Bytes! # address
+}
+
+type CErc20Delegator_hDAINewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CErc20Delegator_hDAINewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hDAINewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAIReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hDAITransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+type CErc20Delegator_hUSDCAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCLiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCNewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hUSDCNewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CErc20Delegator_hUSDCNewImplementation @entity {
+  id: ID!
+  oldImplementation: Bytes! # address
+  newImplementation: Bytes! # address
+}
+
+type CErc20Delegator_hUSDCNewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CErc20Delegator_hUSDCNewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hUSDCNewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDCTransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+type CErc20Delegator_hUSDTAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTLiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTNewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hUSDTNewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CErc20Delegator_hUSDTNewImplementation @entity {
+  id: ID!
+  oldImplementation: Bytes! # address
+  newImplementation: Bytes! # address
+}
+
+type CErc20Delegator_hUSDTNewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CErc20Delegator_hUSDTNewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hUSDTNewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hUSDTTransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+type CErc20Delegator_hFRAXAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXLiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXNewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hFRAXNewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CErc20Delegator_hFRAXNewImplementation @entity {
+  id: ID!
+  oldImplementation: Bytes! # address
+  newImplementation: Bytes! # address
+}
+
+type CErc20Delegator_hFRAXNewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CErc20Delegator_hFRAXNewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hFRAXNewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hFRAXTransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+type CErc20Delegator_hWBTCAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCLiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCNewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hWBTCNewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CErc20Delegator_hWBTCNewImplementation @entity {
+  id: ID!
+  oldImplementation: Bytes! # address
+  newImplementation: Bytes! # address
+}
+
+type CErc20Delegator_hWBTCNewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CErc20Delegator_hWBTCNewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hWBTCNewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hWBTCTransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+type CEther_hMATICAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CEther_hMATICApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CEther_hMATICBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CEther_hMATICFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CEther_hMATICLiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CEther_hMATICMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CEther_hMATICNewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CEther_hMATICNewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CEther_hMATICNewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CEther_hMATICNewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CEther_hMATICNewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CEther_hMATICRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CEther_hMATICRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CEther_hMATICReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CEther_hMATICReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CEther_hMATICTransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
+type CErc20Delegator_hLINKAccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKApproval @entity {
+  id: ID!
+  owner: Bytes! # address
+  spender: Bytes! # address
+  amount: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKBorrow @entity {
+  id: ID!
+  borrower: Bytes! # address
+  borrowAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKFailure @entity {
+  id: ID!
+  error: BigInt! # uint256
+  info: BigInt! # uint256
+  detail: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKLiquidateBorrow @entity {
+  id: ID!
+  liquidator: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  cTokenCollateral: Bytes! # address
+  seizeTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKMint @entity {
+  id: ID!
+  minter: Bytes! # address
+  mintAmount: BigInt! # uint256
+  mintTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKNewAdmin @entity {
+  id: ID!
+  oldAdmin: Bytes! # address
+  newAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hLINKNewComptroller @entity {
+  id: ID!
+  oldComptroller: Bytes! # address
+  newComptroller: Bytes! # address
+}
+
+type CErc20Delegator_hLINKNewImplementation @entity {
+  id: ID!
+  oldImplementation: Bytes! # address
+  newImplementation: Bytes! # address
+}
+
+type CErc20Delegator_hLINKNewMarketInterestRateModel @entity {
+  id: ID!
+  oldInterestRateModel: Bytes! # address
+  newInterestRateModel: Bytes! # address
+}
+
+type CErc20Delegator_hLINKNewPendingAdmin @entity {
+  id: ID!
+  oldPendingAdmin: Bytes! # address
+  newPendingAdmin: Bytes! # address
+}
+
+type CErc20Delegator_hLINKNewReserveFactor @entity {
+  id: ID!
+  oldReserveFactorMantissa: BigInt! # uint256
+  newReserveFactorMantissa: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKRedeem @entity {
+  id: ID!
+  redeemer: Bytes! # address
+  redeemAmount: BigInt! # uint256
+  redeemTokens: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKRepayBorrow @entity {
+  id: ID!
+  payer: Bytes! # address
+  borrower: Bytes! # address
+  repayAmount: BigInt! # uint256
+  accountBorrows: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKReservesAdded @entity {
+  id: ID!
+  benefactor: Bytes! # address
+  addAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKReservesReduced @entity {
+  id: ID!
+  admin: Bytes! # address
+  reduceAmount: BigInt! # uint256
+  newTotalReserves: BigInt! # uint256
+}
+
+type CErc20Delegator_hLINKTransfer @entity {
+  id: ID!
+  from: Bytes! # address
+  to: Bytes! # address
+  amount: BigInt! # uint256
+}
