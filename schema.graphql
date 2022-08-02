@@ -1,10 +1,4 @@
 type TokenRecipients @entity {
   id: ID! # token address string
-  recipients: [Snapshot!] # address token recipients
-}
-
-type Snapshot @entity {
-  id: ID! # tokenholder address string
-  balance: BigInt # balance of the tokenholder
-  debt: BigInt # debt of the tokenholder
+  recipients: [String!] # address token recipients with duplicates
 }
