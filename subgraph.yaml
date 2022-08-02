@@ -8,64 +8,17 @@ dataSources:
     source:
       address: "0x243E33aa7f6787154a8E59d3C27a66db3F8818ee"
       abi: CErc20Delegator
+      startBlock: 13468574
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - AccrueInterest
-        - Approval
-        - Borrow
-        - Failure
-        - LiquidateBorrow
-        - Mint
-        - NewAdmin
-        - NewComptroller
-        - NewImplementation
-        - NewMarketInterestRateModel
-        - NewPendingAdmin
-        - NewReserveFactor
-        - Redeem
-        - RepayBorrow
-        - ReservesAdded
-        - ReservesReduced
         - Transfer
       abis:
         - name: CErc20Delegator
           file: ./abis/CErc20Delegator.json
       eventHandlers:
-        - event: AccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleAccrueInterest
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
-        - event: Borrow(address,uint256,uint256,uint256)
-          handler: handleBorrow
-        - event: Failure(uint256,uint256,uint256)
-          handler: handleFailure
-        - event: LiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleLiquidateBorrow
-        - event: Mint(address,uint256,uint256)
-          handler: handleMint
-        - event: NewAdmin(address,address)
-          handler: handleNewAdmin
-        - event: NewComptroller(address,address)
-          handler: handleNewComptroller
-        - event: NewImplementation(address,address)
-          handler: handleNewImplementation
-        - event: NewMarketInterestRateModel(address,address)
-          handler: handleNewMarketInterestRateModel
-        - event: NewPendingAdmin(address,address)
-          handler: handleNewPendingAdmin
-        - event: NewReserveFactor(uint256,uint256)
-          handler: handleNewReserveFactor
-        - event: Redeem(address,uint256,uint256)
-          handler: handleRedeem
-        - event: RepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleRepayBorrow
-        - event: ReservesAdded(address,uint256,uint256)
-          handler: handleReservesAdded
-        - event: ReservesReduced(address,uint256,uint256)
-          handler: handleReservesReduced
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
       file: ./src/c-erc-20-delegator.ts
@@ -75,64 +28,17 @@ dataSources:
     source:
       address: "0xE4e43864ea18d5E5211352a4B810383460aB7fcC"
       abi: CErc20Delegator_hDAI
+      startBlock: 13468559
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hDAIAccrueInterest
-        - CErc20Delegator_hDAIApproval
-        - CErc20Delegator_hDAIBorrow
-        - CErc20Delegator_hDAIFailure
-        - CErc20Delegator_hDAILiquidateBorrow
-        - CErc20Delegator_hDAIMint
-        - CErc20Delegator_hDAINewAdmin
-        - CErc20Delegator_hDAINewComptroller
-        - CErc20Delegator_hDAINewImplementation
-        - CErc20Delegator_hDAINewMarketInterestRateModel
-        - CErc20Delegator_hDAINewPendingAdmin
-        - CErc20Delegator_hDAINewReserveFactor
-        - CErc20Delegator_hDAIRedeem
-        - CErc20Delegator_hDAIRepayBorrow
-        - CErc20Delegator_hDAIReservesAdded
-        - CErc20Delegator_hDAIReservesReduced
         - CErc20Delegator_hDAITransfer
       abis:
         - name: CErc20Delegator_hDAI
           file: ./abis/CErc20Delegator_hDAI.json
       eventHandlers:
-        - event: CErc20Delegator_hDAIAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIAccrueInterest
-        - event: CErc20Delegator_hDAIApproval(indexed address,indexed address,uint256)
-          handler: handleCErc20Delegator_hDAIApproval
-        - event: CErc20Delegator_hDAIBorrow(address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIBorrow
-        - event: CErc20Delegator_hDAIFailure(uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIFailure
-        - event: CErc20Delegator_hDAILiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCErc20Delegator_hDAILiquidateBorrow
-        - event: CErc20Delegator_hDAIMint(address,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIMint
-        - event: CErc20Delegator_hDAINewAdmin(address,address)
-          handler: handleCErc20Delegator_hDAINewAdmin
-        - event: CErc20Delegator_hDAINewComptroller(address,address)
-          handler: handleCErc20Delegator_hDAINewComptroller
-        - event: CErc20Delegator_hDAINewImplementation(address,address)
-          handler: handleCErc20Delegator_hDAINewImplementation
-        - event: CErc20Delegator_hDAINewMarketInterestRateModel(address,address)
-          handler: handleCErc20Delegator_hDAINewMarketInterestRateModel
-        - event: CErc20Delegator_hDAINewPendingAdmin(address,address)
-          handler: handleCErc20Delegator_hDAINewPendingAdmin
-        - event: CErc20Delegator_hDAINewReserveFactor(uint256,uint256)
-          handler: handleCErc20Delegator_hDAINewReserveFactor
-        - event: CErc20Delegator_hDAIRedeem(address,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIRedeem
-        - event: CErc20Delegator_hDAIRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIRepayBorrow
-        - event: CErc20Delegator_hDAIReservesAdded(address,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIReservesAdded
-        - event: CErc20Delegator_hDAIReservesReduced(address,uint256,uint256)
-          handler: handleCErc20Delegator_hDAIReservesReduced
         - event: CErc20Delegator_hDAITransfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hDAITransfer
       file: ./src/c-erc-20-delegator-h-dai.ts
@@ -142,64 +48,17 @@ dataSources:
     source:
       address: "0x607312a5C671D0C511998171e634DE32156e69d0"
       abi: CErc20Delegator_hUSDC
+      startBlock: 13507622
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hUSDCAccrueInterest
-        - CErc20Delegator_hUSDCApproval
-        - CErc20Delegator_hUSDCBorrow
-        - CErc20Delegator_hUSDCFailure
-        - CErc20Delegator_hUSDCLiquidateBorrow
-        - CErc20Delegator_hUSDCMint
-        - CErc20Delegator_hUSDCNewAdmin
-        - CErc20Delegator_hUSDCNewComptroller
-        - CErc20Delegator_hUSDCNewImplementation
-        - CErc20Delegator_hUSDCNewMarketInterestRateModel
-        - CErc20Delegator_hUSDCNewPendingAdmin
-        - CErc20Delegator_hUSDCNewReserveFactor
-        - CErc20Delegator_hUSDCRedeem
-        - CErc20Delegator_hUSDCRepayBorrow
-        - CErc20Delegator_hUSDCReservesAdded
-        - CErc20Delegator_hUSDCReservesReduced
         - CErc20Delegator_hUSDCTransfer
       abis:
         - name: CErc20Delegator_hUSDC
           file: ./abis/CErc20Delegator_hUSDC.json
       eventHandlers:
-        - event: CErc20Delegator_hUSDCAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCAccrueInterest
-        - event: CErc20Delegator_hUSDCApproval(indexed address,indexed address,uint256)
-          handler: handleCErc20Delegator_hUSDCApproval
-        - event: CErc20Delegator_hUSDCBorrow(address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCBorrow
-        - event: CErc20Delegator_hUSDCFailure(uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCFailure
-        - event: CErc20Delegator_hUSDCLiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCErc20Delegator_hUSDCLiquidateBorrow
-        - event: CErc20Delegator_hUSDCMint(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCMint
-        - event: CErc20Delegator_hUSDCNewAdmin(address,address)
-          handler: handleCErc20Delegator_hUSDCNewAdmin
-        - event: CErc20Delegator_hUSDCNewComptroller(address,address)
-          handler: handleCErc20Delegator_hUSDCNewComptroller
-        - event: CErc20Delegator_hUSDCNewImplementation(address,address)
-          handler: handleCErc20Delegator_hUSDCNewImplementation
-        - event: CErc20Delegator_hUSDCNewMarketInterestRateModel(address,address)
-          handler: handleCErc20Delegator_hUSDCNewMarketInterestRateModel
-        - event: CErc20Delegator_hUSDCNewPendingAdmin(address,address)
-          handler: handleCErc20Delegator_hUSDCNewPendingAdmin
-        - event: CErc20Delegator_hUSDCNewReserveFactor(uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCNewReserveFactor
-        - event: CErc20Delegator_hUSDCRedeem(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCRedeem
-        - event: CErc20Delegator_hUSDCRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCRepayBorrow
-        - event: CErc20Delegator_hUSDCReservesAdded(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCReservesAdded
-        - event: CErc20Delegator_hUSDCReservesReduced(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDCReservesReduced
         - event: CErc20Delegator_hUSDCTransfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hUSDCTransfer
       file: ./src/c-erc-20-delegator-h-usdc.ts
@@ -209,64 +68,17 @@ dataSources:
     source:
       address: "0x103f2CA2148B863942397dbc50a425cc4f4E9A27"
       abi: CErc20Delegator_hUSDT
+      startBlock: 13507838
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hUSDTAccrueInterest
-        - CErc20Delegator_hUSDTApproval
-        - CErc20Delegator_hUSDTBorrow
-        - CErc20Delegator_hUSDTFailure
-        - CErc20Delegator_hUSDTLiquidateBorrow
-        - CErc20Delegator_hUSDTMint
-        - CErc20Delegator_hUSDTNewAdmin
-        - CErc20Delegator_hUSDTNewComptroller
-        - CErc20Delegator_hUSDTNewImplementation
-        - CErc20Delegator_hUSDTNewMarketInterestRateModel
-        - CErc20Delegator_hUSDTNewPendingAdmin
-        - CErc20Delegator_hUSDTNewReserveFactor
-        - CErc20Delegator_hUSDTRedeem
-        - CErc20Delegator_hUSDTRepayBorrow
-        - CErc20Delegator_hUSDTReservesAdded
-        - CErc20Delegator_hUSDTReservesReduced
         - CErc20Delegator_hUSDTTransfer
       abis:
         - name: CErc20Delegator_hUSDT
           file: ./abis/CErc20Delegator_hUSDT.json
       eventHandlers:
-        - event: CErc20Delegator_hUSDTAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTAccrueInterest
-        - event: CErc20Delegator_hUSDTApproval(indexed address,indexed address,uint256)
-          handler: handleCErc20Delegator_hUSDTApproval
-        - event: CErc20Delegator_hUSDTBorrow(address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTBorrow
-        - event: CErc20Delegator_hUSDTFailure(uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTFailure
-        - event: CErc20Delegator_hUSDTLiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCErc20Delegator_hUSDTLiquidateBorrow
-        - event: CErc20Delegator_hUSDTMint(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTMint
-        - event: CErc20Delegator_hUSDTNewAdmin(address,address)
-          handler: handleCErc20Delegator_hUSDTNewAdmin
-        - event: CErc20Delegator_hUSDTNewComptroller(address,address)
-          handler: handleCErc20Delegator_hUSDTNewComptroller
-        - event: CErc20Delegator_hUSDTNewImplementation(address,address)
-          handler: handleCErc20Delegator_hUSDTNewImplementation
-        - event: CErc20Delegator_hUSDTNewMarketInterestRateModel(address,address)
-          handler: handleCErc20Delegator_hUSDTNewMarketInterestRateModel
-        - event: CErc20Delegator_hUSDTNewPendingAdmin(address,address)
-          handler: handleCErc20Delegator_hUSDTNewPendingAdmin
-        - event: CErc20Delegator_hUSDTNewReserveFactor(uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTNewReserveFactor
-        - event: CErc20Delegator_hUSDTRedeem(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTRedeem
-        - event: CErc20Delegator_hUSDTRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTRepayBorrow
-        - event: CErc20Delegator_hUSDTReservesAdded(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTReservesAdded
-        - event: CErc20Delegator_hUSDTReservesReduced(address,uint256,uint256)
-          handler: handleCErc20Delegator_hUSDTReservesReduced
         - event: CErc20Delegator_hUSDTTransfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hUSDTTransfer
       file: ./src/c-erc-20-delegator-h-usdt.ts
@@ -276,64 +88,17 @@ dataSources:
     source:
       address: "0x2c7a9d9919f042C4C120199c69e126124d09BE7c"
       abi: CErc20Delegator_hFRAX
+      startBlock: 26810871
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hFRAXAccrueInterest
-        - CErc20Delegator_hFRAXApproval
-        - CErc20Delegator_hFRAXBorrow
-        - CErc20Delegator_hFRAXFailure
-        - CErc20Delegator_hFRAXLiquidateBorrow
-        - CErc20Delegator_hFRAXMint
-        - CErc20Delegator_hFRAXNewAdmin
-        - CErc20Delegator_hFRAXNewComptroller
-        - CErc20Delegator_hFRAXNewImplementation
-        - CErc20Delegator_hFRAXNewMarketInterestRateModel
-        - CErc20Delegator_hFRAXNewPendingAdmin
-        - CErc20Delegator_hFRAXNewReserveFactor
-        - CErc20Delegator_hFRAXRedeem
-        - CErc20Delegator_hFRAXRepayBorrow
-        - CErc20Delegator_hFRAXReservesAdded
-        - CErc20Delegator_hFRAXReservesReduced
         - CErc20Delegator_hFRAXTransfer
       abis:
         - name: CErc20Delegator_hFRAX
           file: ./abis/CErc20Delegator_hFRAX.json
       eventHandlers:
-        - event: CErc20Delegator_hFRAXAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXAccrueInterest
-        - event: CErc20Delegator_hFRAXApproval(indexed address,indexed address,uint256)
-          handler: handleCErc20Delegator_hFRAXApproval
-        - event: CErc20Delegator_hFRAXBorrow(address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXBorrow
-        - event: CErc20Delegator_hFRAXFailure(uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXFailure
-        - event: CErc20Delegator_hFRAXLiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCErc20Delegator_hFRAXLiquidateBorrow
-        - event: CErc20Delegator_hFRAXMint(address,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXMint
-        - event: CErc20Delegator_hFRAXNewAdmin(address,address)
-          handler: handleCErc20Delegator_hFRAXNewAdmin
-        - event: CErc20Delegator_hFRAXNewComptroller(address,address)
-          handler: handleCErc20Delegator_hFRAXNewComptroller
-        - event: CErc20Delegator_hFRAXNewImplementation(address,address)
-          handler: handleCErc20Delegator_hFRAXNewImplementation
-        - event: CErc20Delegator_hFRAXNewMarketInterestRateModel(address,address)
-          handler: handleCErc20Delegator_hFRAXNewMarketInterestRateModel
-        - event: CErc20Delegator_hFRAXNewPendingAdmin(address,address)
-          handler: handleCErc20Delegator_hFRAXNewPendingAdmin
-        - event: CErc20Delegator_hFRAXNewReserveFactor(uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXNewReserveFactor
-        - event: CErc20Delegator_hFRAXRedeem(address,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXRedeem
-        - event: CErc20Delegator_hFRAXRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXRepayBorrow
-        - event: CErc20Delegator_hFRAXReservesAdded(address,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXReservesAdded
-        - event: CErc20Delegator_hFRAXReservesReduced(address,uint256,uint256)
-          handler: handleCErc20Delegator_hFRAXReservesReduced
         - event: CErc20Delegator_hFRAXTransfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hFRAXTransfer
       file: ./src/c-erc-20-delegator-h-frax.ts
@@ -343,64 +108,17 @@ dataSources:
     source:
       address: "0xb4300e088a3AE4e624EE5C71Bc1822F68BB5f2bc"
       abi: CErc20Delegator_hWBTC
+      startBlock: 13507146
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hWBTCAccrueInterest
-        - CErc20Delegator_hWBTCApproval
-        - CErc20Delegator_hWBTCBorrow
-        - CErc20Delegator_hWBTCFailure
-        - CErc20Delegator_hWBTCLiquidateBorrow
-        - CErc20Delegator_hWBTCMint
-        - CErc20Delegator_hWBTCNewAdmin
-        - CErc20Delegator_hWBTCNewComptroller
-        - CErc20Delegator_hWBTCNewImplementation
-        - CErc20Delegator_hWBTCNewMarketInterestRateModel
-        - CErc20Delegator_hWBTCNewPendingAdmin
-        - CErc20Delegator_hWBTCNewReserveFactor
-        - CErc20Delegator_hWBTCRedeem
-        - CErc20Delegator_hWBTCRepayBorrow
-        - CErc20Delegator_hWBTCReservesAdded
-        - CErc20Delegator_hWBTCReservesReduced
         - CErc20Delegator_hWBTCTransfer
       abis:
         - name: CErc20Delegator_hWBTC
           file: ./abis/CErc20Delegator_hWBTC.json
       eventHandlers:
-        - event: CErc20Delegator_hWBTCAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCAccrueInterest
-        - event: CErc20Delegator_hWBTCApproval(indexed address,indexed address,uint256)
-          handler: handleCErc20Delegator_hWBTCApproval
-        - event: CErc20Delegator_hWBTCBorrow(address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCBorrow
-        - event: CErc20Delegator_hWBTCFailure(uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCFailure
-        - event: CErc20Delegator_hWBTCLiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCErc20Delegator_hWBTCLiquidateBorrow
-        - event: CErc20Delegator_hWBTCMint(address,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCMint
-        - event: CErc20Delegator_hWBTCNewAdmin(address,address)
-          handler: handleCErc20Delegator_hWBTCNewAdmin
-        - event: CErc20Delegator_hWBTCNewComptroller(address,address)
-          handler: handleCErc20Delegator_hWBTCNewComptroller
-        - event: CErc20Delegator_hWBTCNewImplementation(address,address)
-          handler: handleCErc20Delegator_hWBTCNewImplementation
-        - event: CErc20Delegator_hWBTCNewMarketInterestRateModel(address,address)
-          handler: handleCErc20Delegator_hWBTCNewMarketInterestRateModel
-        - event: CErc20Delegator_hWBTCNewPendingAdmin(address,address)
-          handler: handleCErc20Delegator_hWBTCNewPendingAdmin
-        - event: CErc20Delegator_hWBTCNewReserveFactor(uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCNewReserveFactor
-        - event: CErc20Delegator_hWBTCRedeem(address,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCRedeem
-        - event: CErc20Delegator_hWBTCRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCRepayBorrow
-        - event: CErc20Delegator_hWBTCReservesAdded(address,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCReservesAdded
-        - event: CErc20Delegator_hWBTCReservesReduced(address,uint256,uint256)
-          handler: handleCErc20Delegator_hWBTCReservesReduced
         - event: CErc20Delegator_hWBTCTransfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hWBTCTransfer
       file: ./src/c-erc-20-delegator-h-wbtc.ts
@@ -410,61 +128,17 @@ dataSources:
     source:
       address: "0xEbd7f3349AbA8bB15b897e03D6c1a4Ba95B55e31"
       abi: CEther_hMATIC
+      startBlock: 13509980
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CEther_hMATICAccrueInterest
-        - CEther_hMATICApproval
-        - CEther_hMATICBorrow
-        - CEther_hMATICFailure
-        - CEther_hMATICLiquidateBorrow
-        - CEther_hMATICMint
-        - CEther_hMATICNewAdmin
-        - CEther_hMATICNewComptroller
-        - CEther_hMATICNewMarketInterestRateModel
-        - CEther_hMATICNewPendingAdmin
-        - CEther_hMATICNewReserveFactor
-        - CEther_hMATICRedeem
-        - CEther_hMATICRepayBorrow
-        - CEther_hMATICReservesAdded
-        - CEther_hMATICReservesReduced
         - CEther_hMATICTransfer
       abis:
         - name: CEther_hMATIC
           file: ./abis/CEther_hMATIC.json
       eventHandlers:
-        - event: CEther_hMATICAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCEther_hMATICAccrueInterest
-        - event: CEther_hMATICApproval(indexed address,indexed address,uint256)
-          handler: handleCEther_hMATICApproval
-        - event: CEther_hMATICBorrow(address,uint256,uint256,uint256)
-          handler: handleCEther_hMATICBorrow
-        - event: CEther_hMATICFailure(uint256,uint256,uint256)
-          handler: handleCEther_hMATICFailure
-        - event: CEther_hMATICLiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCEther_hMATICLiquidateBorrow
-        - event: CEther_hMATICMint(address,uint256,uint256)
-          handler: handleCEther_hMATICMint
-        - event: CEther_hMATICNewAdmin(address,address)
-          handler: handleCEther_hMATICNewAdmin
-        - event: CEther_hMATICNewComptroller(address,address)
-          handler: handleCEther_hMATICNewComptroller
-        - event: CEther_hMATICNewMarketInterestRateModel(address,address)
-          handler: handleCEther_hMATICNewMarketInterestRateModel
-        - event: CEther_hMATICNewPendingAdmin(address,address)
-          handler: handleCEther_hMATICNewPendingAdmin
-        - event: CEther_hMATICNewReserveFactor(uint256,uint256)
-          handler: handleCEther_hMATICNewReserveFactor
-        - event: CEther_hMATICRedeem(address,uint256,uint256)
-          handler: handleCEther_hMATICRedeem
-        - event: CEther_hMATICRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCEther_hMATICRepayBorrow
-        - event: CEther_hMATICReservesAdded(address,uint256,uint256)
-          handler: handleCEther_hMATICReservesAdded
-        - event: CEther_hMATICReservesReduced(address,uint256,uint256)
-          handler: handleCEther_hMATICReservesReduced
         - event: CEther_hMATICTransfer(indexed address,indexed address,uint256)
           handler: handleCEther_hMATICTransfer
       file: ./src/c-ether-h-matic.ts
@@ -474,64 +148,17 @@ dataSources:
     source:
       address: "0x5B9451B1bFAE2A74D7b9D0D45BdD0E9a27F7bB22"
       abi: CErc20Delegator_hLINK
+      startBlock: 13510425
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hLINKAccrueInterest
-        - CErc20Delegator_hLINKApproval
-        - CErc20Delegator_hLINKBorrow
-        - CErc20Delegator_hLINKFailure
-        - CErc20Delegator_hLINKLiquidateBorrow
-        - CErc20Delegator_hLINKMint
-        - CErc20Delegator_hLINKNewAdmin
-        - CErc20Delegator_hLINKNewComptroller
-        - CErc20Delegator_hLINKNewImplementation
-        - CErc20Delegator_hLINKNewMarketInterestRateModel
-        - CErc20Delegator_hLINKNewPendingAdmin
-        - CErc20Delegator_hLINKNewReserveFactor
-        - CErc20Delegator_hLINKRedeem
-        - CErc20Delegator_hLINKRepayBorrow
-        - CErc20Delegator_hLINKReservesAdded
-        - CErc20Delegator_hLINKReservesReduced
         - CErc20Delegator_hLINKTransfer
       abis:
         - name: CErc20Delegator_hLINK
           file: ./abis/CErc20Delegator_hLINK.json
       eventHandlers:
-        - event: CErc20Delegator_hLINKAccrueInterest(uint256,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKAccrueInterest
-        - event: CErc20Delegator_hLINKApproval(indexed address,indexed address,uint256)
-          handler: handleCErc20Delegator_hLINKApproval
-        - event: CErc20Delegator_hLINKBorrow(address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKBorrow
-        - event: CErc20Delegator_hLINKFailure(uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKFailure
-        - event: CErc20Delegator_hLINKLiquidateBorrow(address,address,uint256,address,uint256)
-          handler: handleCErc20Delegator_hLINKLiquidateBorrow
-        - event: CErc20Delegator_hLINKMint(address,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKMint
-        - event: CErc20Delegator_hLINKNewAdmin(address,address)
-          handler: handleCErc20Delegator_hLINKNewAdmin
-        - event: CErc20Delegator_hLINKNewComptroller(address,address)
-          handler: handleCErc20Delegator_hLINKNewComptroller
-        - event: CErc20Delegator_hLINKNewImplementation(address,address)
-          handler: handleCErc20Delegator_hLINKNewImplementation
-        - event: CErc20Delegator_hLINKNewMarketInterestRateModel(address,address)
-          handler: handleCErc20Delegator_hLINKNewMarketInterestRateModel
-        - event: CErc20Delegator_hLINKNewPendingAdmin(address,address)
-          handler: handleCErc20Delegator_hLINKNewPendingAdmin
-        - event: CErc20Delegator_hLINKNewReserveFactor(uint256,uint256)
-          handler: handleCErc20Delegator_hLINKNewReserveFactor
-        - event: CErc20Delegator_hLINKRedeem(address,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKRedeem
-        - event: CErc20Delegator_hLINKRepayBorrow(address,address,uint256,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKRepayBorrow
-        - event: CErc20Delegator_hLINKReservesAdded(address,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKReservesAdded
-        - event: CErc20Delegator_hLINKReservesReduced(address,uint256,uint256)
-          handler: handleCErc20Delegator_hLINKReservesReduced
         - event: CErc20Delegator_hLINKTransfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hLINKTransfer
       file: ./src/c-erc-20-delegator-h-link.ts
