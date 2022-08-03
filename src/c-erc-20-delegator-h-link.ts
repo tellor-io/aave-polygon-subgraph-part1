@@ -12,8 +12,8 @@ export function handleCErc20Delegator_hLINKTransfer(
   if (!tokenRecipients) {
     tokenRecipients = new TokenRecipients("0x5B9451B1bFAE2A74D7b9D0D45BdD0E9a27F7bB22")
   }
-  if(event.params.to.toString() != "0x0000000000000000000000000000000000000000") {
-    tokenRecipients.recipients?.push(event.params.to.toString())
+  if(event.params.to.toHexString() != "0x0000000000000000000000000000000000000000") {
+    tokenRecipients.recipients.push(event.params.to.toHexString())
     tokenRecipients.save()
   }
 }

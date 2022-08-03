@@ -12,8 +12,8 @@ export function handleCErc20Delegator_hDAITransfer(
   if (!tokenRecipients) {
     tokenRecipients = new TokenRecipients("0xE4e43864ea18d5E5211352a4B810383460aB7fcC")
   }
-  if(event.params.to.toString() != "0x0000000000000000000000000000000000000000") {
-    tokenRecipients.recipients?.push(event.params.to.toString())
+  if(event.params.to.toHexString() != "0x0000000000000000000000000000000000000000") {
+    tokenRecipients.recipients.push(event.params.to.toHexString())
     tokenRecipients.save()
   }
 }

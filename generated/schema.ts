@@ -42,20 +42,12 @@ export class TokenRecipients extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get recipients(): Array<string> | null {
+  get recipients(): Array<string> {
     let value = this.get("recipients");
-    if (!value || value.kind == ValueKind.NULL) {
-      return null;
-    } else {
-      return value.toStringArray();
-    }
+    return value!.toStringArray();
   }
 
-  set recipients(value: Array<string> | null) {
-    if (!value) {
-      this.unset("recipients");
-    } else {
-      this.set("recipients", Value.fromStringArray(<Array<string>>value));
-    }
+  set recipients(value: Array<string>) {
+    this.set("recipients", Value.fromStringArray(value));
   }
 }

@@ -12,8 +12,8 @@ export function handleCErc20Delegator_hUSDCTransfer(
   if (!tokenRecipients) {
     tokenRecipients = new TokenRecipients("0x607312a5C671D0C511998171e634DE32156e69d0")
   }
-  if(event.params.to.toString() != "0x0000000000000000000000000000000000000000") {
-    tokenRecipients.recipients?.push(event.params.to.toString())
+  if(event.params.to.toHexString() != "0x0000000000000000000000000000000000000000") {
+    tokenRecipients.recipients.push(event.params.to.toHexString())
     tokenRecipients.save()
   }
 }
