@@ -1,4 +1,5 @@
-type TokenRecipients @entity {
-  id: ID! # token address string
-  recipients: [String!]! # address token recipients with duplicates
+type Transfer @entity {
+  id: ID! # 
+  contract: String # contract address
+  to: String # to address
 }

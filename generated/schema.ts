@@ -11,7 +11,7 @@ import {
   BigDecimal
 } from "@graphprotocol/graph-ts";
 
-export class TokenRecipients extends Entity {
+export class Transfer extends Entity {
   constructor(id: string) {
     super();
     this.set("id", Value.fromString(id));
@@ -19,18 +19,18 @@ export class TokenRecipients extends Entity {
 
   save(): void {
     let id = this.get("id");
-    assert(id != null, "Cannot save TokenRecipients entity without an ID");
+    assert(id != null, "Cannot save Transfer entity without an ID");
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        `Entities of type TokenRecipients must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+        `Entities of type Transfer must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
-      store.set("TokenRecipients", id.toString(), this);
+      store.set("Transfer", id.toString(), this);
     }
   }
 
-  static load(id: string): TokenRecipients | null {
-    return changetype<TokenRecipients | null>(store.get("TokenRecipients", id));
+  static load(id: string): Transfer | null {
+    return changetype<Transfer | null>(store.get("Transfer", id));
   }
 
   get id(): string {
@@ -42,12 +42,37 @@ export class TokenRecipients extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get recipients(): Array<string> {
-    let value = this.get("recipients");
-    return value!.toStringArray();
+  get contract(): string | null {
+    let value = this.get("contract");
+    if (!value || value.kind == ValueKind.NULL) {
+      return null;
+    } else {
+      return value.toString();
+    }
   }
 
-  set recipients(value: Array<string>) {
-    this.set("recipients", Value.fromStringArray(value));
+  set contract(value: string | null) {
+    if (!value) {
+      this.unset("contract");
+    } else {
+      this.set("contract", Value.fromString(<string>value));
+    }
+  }
+
+  get to(): string | null {
+    let value = this.get("to");
+    if (!value || value.kind == ValueKind.NULL) {
+      return null;
+    } else {
+      return value.toString();
+    }
+  }
+
+  set to(value: string | null) {
+    if (!value) {
+      this.unset("to");
+    } else {
+      this.set("to", Value.fromString(<string>value));
+    }
   }
 }
