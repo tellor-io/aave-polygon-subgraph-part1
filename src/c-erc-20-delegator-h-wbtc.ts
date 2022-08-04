@@ -1,6 +1,6 @@
 import {
-  CErc20Delegator_hWBTCTransfer as CErc20Delegator_hWBTCTransferEvent
-} from "../generated/CErc20Delegator_hWBTC/CErc20Delegator_hWBTC"
+  Transfer as CErc20Delegator_hWBTCTransferEvent
+} from "../generated/CErc20Delegator_hWBTC/CErc20Delegator"
 import {
   Transfer,
 } from "../generated/schema"

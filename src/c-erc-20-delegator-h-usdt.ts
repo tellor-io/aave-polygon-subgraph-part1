@@ -1,6 +1,6 @@
 import {
-  CErc20Delegator_hUSDTTransfer as CErc20Delegator_hUSDTTransferEvent
-} from "../generated/CErc20Delegator_hUSDT/CErc20Delegator_hUSDT"
+  Transfer as CErc20Delegator_hUSDTTransferEvent
+} from "../generated/CErc20Delegator_hUSDT/CErc20Delegator"
 import {
   Transfer,
 } from "../generated/schema"

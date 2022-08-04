@@ -1,6 +1,6 @@
 import {
-  CErc20Delegator_hLINKTransfer as CErc20Delegator_hLINKTransferEvent
-} from "../generated/CErc20Delegator_hLINK/CErc20Delegator_hLINK"
+  Transfer as CErc20Delegator_hLINKTransferEvent
+} from "../generated/CErc20Delegator_hLINK/CErc20Delegator"
 import {
   Transfer,
 } from "../generated/schema"

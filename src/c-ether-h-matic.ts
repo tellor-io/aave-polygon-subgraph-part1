@@ -1,6 +1,6 @@
 import {
-  CEther_hMATICTransfer as CEther_hMATICTransferEvent
-} from "../generated/CEther_hMATIC/CEther_hMATIC"
+  Transfer as CEther_hMATICTransferEvent
+} from "../generated/CEther_hMATIC/CErc20Delegator"
 import {
   Transfer
 } from "../generated/schema"

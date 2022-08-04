@@ -27,19 +27,19 @@ dataSources:
     network: matic
     source:
       address: "0xE4e43864ea18d5E5211352a4B810383460aB7fcC"
-      abi: CErc20Delegator_hDAI
+      abi: CErc20Delegator
       startBlock: 13468559
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hDAITransfer
+        - Transfer
       abis:
-        - name: CErc20Delegator_hDAI
-          file: CErc20Delegator_hDAI/abis/CErc20Delegator_hDAI.json
+        - name: CErc20Delegator
+          file: CErc20Delegator_hDAI/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CErc20Delegator_hDAITransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hDAITransfer
       file: CErc20Delegator_hDAI/CErc20Delegator_hDAI.wasm
   - kind: ethereum
@@ -47,19 +47,19 @@ dataSources:
     network: matic
     source:
       address: "0x607312a5C671D0C511998171e634DE32156e69d0"
-      abi: CErc20Delegator_hUSDC
+      abi: CErc20Delegator
       startBlock: 13507622
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hUSDCTransfer
+        - Transfer
       abis:
-        - name: CErc20Delegator_hUSDC
-          file: CErc20Delegator_hUSDC/abis/CErc20Delegator_hUSDC.json
+        - name: CErc20Delegator
+          file: CErc20Delegator_hUSDC/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CErc20Delegator_hUSDCTransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hUSDCTransfer
       file: CErc20Delegator_hUSDC/CErc20Delegator_hUSDC.wasm
   - kind: ethereum
@@ -67,19 +67,19 @@ dataSources:
     network: matic
     source:
       address: "0x103f2CA2148B863942397dbc50a425cc4f4E9A27"
-      abi: CErc20Delegator_hUSDT
+      abi: CErc20Delegator
       startBlock: 13507838
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hUSDTTransfer
+        - Transfer
       abis:
-        - name: CErc20Delegator_hUSDT
-          file: CErc20Delegator_hUSDT/abis/CErc20Delegator_hUSDT.json
+        - name: CErc20Delegator
+          file: CErc20Delegator_hUSDT/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CErc20Delegator_hUSDTTransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hUSDTTransfer
       file: CErc20Delegator_hUSDT/CErc20Delegator_hUSDT.wasm
   - kind: ethereum
@@ -87,19 +87,19 @@ dataSources:
     network: matic
     source:
       address: "0x2c7a9d9919f042C4C120199c69e126124d09BE7c"
-      abi: CErc20Delegator_hFRAX
+      abi: CErc20Delegator
       startBlock: 26810871
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hFRAXTransfer
+        - Transfer
       abis:
-        - name: CErc20Delegator_hFRAX
-          file: CErc20Delegator_hFRAX/abis/CErc20Delegator_hFRAX.json
+        - name: CErc20Delegator
+          file: CErc20Delegator_hFRAX/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CErc20Delegator_hFRAXTransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hFRAXTransfer
       file: CErc20Delegator_hFRAX/CErc20Delegator_hFRAX.wasm
   - kind: ethereum
@@ -107,19 +107,19 @@ dataSources:
     network: matic
     source:
       address: "0xb4300e088a3AE4e624EE5C71Bc1822F68BB5f2bc"
-      abi: CErc20Delegator_hWBTC
+      abi: CErc20Delegator
       startBlock: 13507146
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hWBTCTransfer
+        - Transfer
       abis:
-        - name: CErc20Delegator_hWBTC
-          file: CErc20Delegator_hWBTC/abis/CErc20Delegator_hWBTC.json
+        - name: CErc20Delegator
+          file: CErc20Delegator_hWBTC/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CErc20Delegator_hWBTCTransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hWBTCTransfer
       file: CErc20Delegator_hWBTC/CErc20Delegator_hWBTC.wasm
   - kind: ethereum
@@ -127,19 +127,19 @@ dataSources:
     network: matic
     source:
       address: "0xEbd7f3349AbA8bB15b897e03D6c1a4Ba95B55e31"
-      abi: CEther_hMATIC
+      abi: CErc20Delegator
       startBlock: 13509980
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CEther_hMATICTransfer
+        - Transfer
       abis:
-        - name: CEther_hMATIC
-          file: CEther_hMATIC/abis/CEther_hMATIC.json
+        - name: CErc20Delegator
+          file: CEther_hMATIC/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CEther_hMATICTransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCEther_hMATICTransfer
       file: CEther_hMATIC/CEther_hMATIC.wasm
   - kind: ethereum
@@ -147,18 +147,18 @@ dataSources:
     network: matic
     source:
       address: "0x5B9451B1bFAE2A74D7b9D0D45BdD0E9a27F7bB22"
-      abi: CErc20Delegator_hLINK
+      abi: CErc20Delegator
       startBlock: 13510425
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - CErc20Delegator_hLINKTransfer
+        - Transfer
       abis:
-        - name: CErc20Delegator_hLINK
-          file: CErc20Delegator_hLINK/abis/CErc20Delegator_hLINK.json
+        - name: CErc20Delegator
+          file: CErc20Delegator_hLINK/abis/CErc20Delegator.json
       eventHandlers:
-        - event: CErc20Delegator_hLINKTransfer(indexed address,indexed address,uint256)
+        - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hLINKTransfer
       file: CErc20Delegator_hLINK/CErc20Delegator_hLINK.wasm

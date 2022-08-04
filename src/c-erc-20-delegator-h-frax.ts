@@ -1,6 +1,6 @@
 import {
-  CErc20Delegator_hFRAXTransfer as CErc20Delegator_hFRAXTransferEvent
-} from "../generated/CErc20Delegator_hFRAX/CErc20Delegator_hFRAX"
+  Transfer as CErc20Delegator_hFRAXTransferEvent
+} from "../generated/CErc20Delegator_hFRAX/CErc20Delegator"
 import {
   Transfer
 } from "../generated/schema"
