@@ -15,12 +15,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleMint
       file: CErc20Delegator/CErc20Delegator.wasm
   - kind: ethereum
     name: CErc20Delegator_hDAI
@@ -35,12 +38,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator_hDAI/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hDAITransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCErc20Delegator_hDAIMint
       file: CErc20Delegator_hDAI/CErc20Delegator_hDAI.wasm
   - kind: ethereum
     name: CErc20Delegator_hUSDC
@@ -55,12 +61,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator_hUSDC/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hUSDCTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCErc20Delegator_hUSDCMint
       file: CErc20Delegator_hUSDC/CErc20Delegator_hUSDC.wasm
   - kind: ethereum
     name: CErc20Delegator_hUSDT
@@ -75,12 +84,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator_hUSDT/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hUSDTTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCErc20Delegator_hUSDTMint
       file: CErc20Delegator_hUSDT/CErc20Delegator_hUSDT.wasm
   - kind: ethereum
     name: CErc20Delegator_hFRAX
@@ -95,12 +107,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator_hFRAX/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hFRAXTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCErc20Delegator_hFRAXMint
       file: CErc20Delegator_hFRAX/CErc20Delegator_hFRAX.wasm
   - kind: ethereum
     name: CErc20Delegator_hWBTC
@@ -115,12 +130,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator_hWBTC/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hWBTCTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCErc20Delegator_hWBTCMint
       file: CErc20Delegator_hWBTC/CErc20Delegator_hWBTC.wasm
   - kind: ethereum
     name: CEther_hMATIC
@@ -135,12 +153,15 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CEther_hMATIC/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCEther_hMATICTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCEther_hMATICMint
       file: CEther_hMATIC/CEther_hMATIC.wasm
   - kind: ethereum
     name: CErc20Delegator_hLINK
@@ -155,10 +176,13 @@ dataSources:
       language: wasm/assemblyscript
       entities:
         - Transfer
+        - Mint
       abis:
         - name: CErc20Delegator
           file: CErc20Delegator_hLINK/abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleCErc20Delegator_hLINKTransfer
+        - event: Mint(address,uint256,uint256)
+          handler: handleCErc20Delegator_hLINKMint
       file: CErc20Delegator_hLINK/CErc20Delegator_hLINK.wasm

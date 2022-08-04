@@ -76,3 +76,69 @@ export class Transfer extends Entity {
     }
   }
 }
+
+export class Mint extends Entity {
+  constructor(id: string) {
+    super();
+    this.set("id", Value.fromString(id));
+  }
+
+  save(): void {
+    let id = this.get("id");
+    assert(id != null, "Cannot save Mint entity without an ID");
+    if (id) {
+      assert(
+        id.kind == ValueKind.STRING,
+        `Entities of type Mint must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
+      );
+      store.set("Mint", id.toString(), this);
+    }
+  }
+
+  static load(id: string): Mint | null {
+    return changetype<Mint | null>(store.get("Mint", id));
+  }
+
+  get id(): string {
+    let value = this.get("id");
+    return value!.toString();
+  }
+
+  set id(value: string) {
+    this.set("id", Value.fromString(value));
+  }
+
+  get contract(): string | null {
+    let value = this.get("contract");
+    if (!value || value.kind == ValueKind.NULL) {
+      return null;
+    } else {
+      return value.toString();
+    }
+  }
+
+  set contract(value: string | null) {
+    if (!value) {
+      this.unset("contract");
+    } else {
+      this.set("contract", Value.fromString(<string>value));
+    }
+  }
+
+  get minter(): string | null {
+    let value = this.get("minter");
+    if (!value || value.kind == ValueKind.NULL) {
+      return null;
+    } else {
+      return value.toString();
+    }
+  }
+
+  set minter(value: string | null) {
+    if (!value) {
+      this.unset("minter");
+    } else {
+      this.set("minter", Value.fromString(<string>value));
+    }
+  }
+}

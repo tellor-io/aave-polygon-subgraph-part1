@@ -3,3 +3,9 @@ type Transfer @entity {
   contract: String # contract address
   to: String # to address
 }
+
+type Mint @entity {
+  id: ID! # 
+  contract: String # contract address
+  minter: String # to address
+}
