@@ -1,5 +1,6 @@
 type Transfer @entity {
   id: ID! # 
+  protocol: String # protocol
   contract: String # contract address
   to: String # to address
 }

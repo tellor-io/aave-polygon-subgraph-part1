@@ -11,6 +11,7 @@ export function handleCErc20Delegator_hUSDTTransfer(event: CErc20Delegator_hUSDT
   const id = event.transaction.hash.toHexString() + event.logIndex.toString()
   let transfer = new Transfer(id)
   transfer.contract = "0x103f2CA2148B863942397dbc50a425cc4f4E9A27"
+  transfer.protocol = "hundred-finance"
   transfer.to = event.params.to.toHexString()
   transfer.save()
 }

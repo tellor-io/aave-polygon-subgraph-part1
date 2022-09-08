@@ -42,6 +42,23 @@ export class Transfer extends Entity {
     this.set("id", Value.fromString(value));
   }
 
+  get protocol(): string | null {
+    let value = this.get("protocol");
+    if (!value || value.kind == ValueKind.NULL) {
+      return null;
+    } else {
+      return value.toString();
+    }
+  }
+
+  set protocol(value: string | null) {
+    if (!value) {
+      this.unset("protocol");
+    } else {
+      this.set("protocol", Value.fromString(<string>value));
+    }
+  }
+
   get contract(): string | null {
     let value = this.get("contract");
     if (!value || value.kind == ValueKind.NULL) {
