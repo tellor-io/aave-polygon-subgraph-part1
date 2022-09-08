@@ -384,7 +384,7 @@ dataSources:
           file: ./abis/CErc20Delegator.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
-          handler: handleaPolWETHTTransfer
+          handler: handleaPolWETHTransfer
       file: ./src/aave-polygon.ts
   - kind: ethereum
     name: aPolCRV
