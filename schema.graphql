@@ -10,3 +10,17 @@ type Mint @entity {
   contract: String # contract address
   minter: String # to address
 }
+
+type Balance @entity {
+  id: ID! #
+  contract: String # contract address
+  owner: String # address of token owner
+  protocol: String # protocol
+  balance: BigInt # balance of token owner
+}type AccrueInterest @entity {
+  id: ID!
+  cashPrior: BigInt! # uint256
+  interestAccumulated: BigInt! # uint256
+  borrowIndex: BigInt! # uint256
+  totalBorrows: BigInt! # uint256
+}
